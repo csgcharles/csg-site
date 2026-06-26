@@ -36,7 +36,7 @@ img {
 header {
   background: #000;
   border-bottom: 2px solid #ffcc00;
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 1000;
 }
@@ -339,6 +339,24 @@ nav.mobile a {
   padding: 12px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+/* Ajuste da galeria no mobile */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .gallery-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .gallery {
+    padding: 40px 0;
+  }
 }
 
 /* CTA */
